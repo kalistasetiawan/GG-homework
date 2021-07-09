@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Homework</title>
     <style>
         .box {
@@ -17,19 +18,21 @@
 </head>
 <body>
     <h1>Create Playlist</h1>
-    <p>Title <input type="text" id="title"></p>
+    <p>Title <input type="text" ></p>
     <p>Description <input type="text" id="desc"></p>
-    <p><input type="button" value="Submit" id="submit"></p>
+    <button onclick="getValue();">Submit</button>
     <div class="box">
         <img src="https://assets.jalantikus.com/assets/cache/0/0/userfiles/2020/10/22/wallpaper-keren-6-c0d34.jpeg" width="200px" height="300px"/><br>
-        <p>Track Title</p>
-        <p id="judul"></p>
-        <p>Artist</p>
-        <p>Album</p>
+        <p><b>Track Title</b></p>
+        <p id="title"></p>
+        <p><b>Artist</b></p>
+        <p id="artist"></p>
+        <p><b>Album</b></p>
+        <p id="album"></p>
         <p><input type="button" value="Select"></p>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js" />
+    <script src="script.js"></script>
 </body>
 </html>
