@@ -5,6 +5,47 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  padding: 20px;
+  background-color: wheat;
+}
+
+.isi {
+  padding: 2px;
+  display: inline;
+}
+
+.outer {
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  display: flex;
+}
+
+a {
+  background-color: teal;
+  border-radius: 0.5rem;
+  padding: 10px;
+  color: white;
+}
+
+.box {
+  margin-left: 20px;
+  text-align: center;
+  width: 50%;
+  background-color: rgb(250, 218, 215);
+  /* border: 1px solid #000; */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+}
+
+input {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 50px;
 }
 
 code {
