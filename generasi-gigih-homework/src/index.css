@@ -23,7 +23,7 @@ body {
   display: flex;
 }
 
-a {
+button {
   background-color: teal;
   border-radius: 0.5rem;
   padding: 10px;
