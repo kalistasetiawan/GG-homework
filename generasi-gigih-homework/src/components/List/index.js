@@ -1,8 +1,9 @@
 import Avatar from './avatar';
 import Datalist from './datalist';
 import Header from './header';
+// import listdata from './listdata';
 
-function List () {
+function List() {
     
     return (
         <div className="List">
@@ -15,7 +16,7 @@ function List () {
                 </div>
           </div>
         </div>
-    );
+     );
 }
 
 export default List;

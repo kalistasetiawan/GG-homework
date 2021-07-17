@@ -1,11 +1,17 @@
-import gif from './gif';
+// import gif from './gif';
+import gifs from './gifs';
 
-function Gif (props) {
+function data () {
+
     return (
-        <img className="Gif" 
-        src={gif.url} 
-        alt={gif.title} />
+        gifs.map((value) => {
+            if (value.rating === 'g') {
+                return (
+                <img className="Gif" src={value.url} alt={value.title} rating={value.rating} />
+                );
+            }
+        })
     )
 }
 
-export default Gif;
+export default data;

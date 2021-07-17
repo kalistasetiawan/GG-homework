@@ -1,11 +1,11 @@
 function header() {
     return (
         <div className="Header">
-            <h1>Create Playlist</h1>
-            <div class="isi">
-            Title <input type="text" /> 
-            Description <input type="text" id="desc" /> 
-            <button>Submit</button>
+            <div class="box2">
+                <h1>Create Playlist</h1>
+                <button>Submit</button>
+                <input type="text" placeholder="Title"/>
+                <input type="text" id="desc" placeholder="Description"/>
             </div>
         </div>
     )
