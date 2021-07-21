@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './components/store/store';
 import './index.css';
-import App from './App';
-// import Playlist from './Playlist';
+// import App from './App';
+import AppRouter from './router/AppRouter';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  //   <AppRouter />
+  // </React.StrictMode>,
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>,
   document.getElementById('root')
 );
 

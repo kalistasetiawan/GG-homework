@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 // import logo from './logo.svg';
 // import Gifs from './components/Gif';
-import './App.css';
 import Playlist from './components/Playlist';
 import Header from './components/List/header';
 // import List from './components/List';
+import './App.css';
 
 function App() {
 
