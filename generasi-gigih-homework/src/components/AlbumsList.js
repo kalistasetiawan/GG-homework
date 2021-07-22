@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import _ from 'lodash';
 
 const AlbumsList = ({ albums }) => {
+
+  const saveAndContinue = (e) => {
+    e.preventDefault();
+    e.target.value = "Deselect"; 
+  }
   return (
     <React.Fragment>
       {Object.keys(albums).length > 0 && (
@@ -27,7 +32,7 @@ const AlbumsList = ({ albums }) => {
                   </a>
                   <p><b>{album.name}</b></p>
                     <small>{album.artists.map((artist) => artist.name).join(', ')}</small>
-                    <p><button>Select</button></p>
+                    <p><input type="button" value="Select" onClick={saveAndContinue} /></p>
                 </div>
               </React.Fragment>
             );

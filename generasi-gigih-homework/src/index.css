@@ -27,7 +27,7 @@ h3 {
   padding-left: 5px;
 }
 
-button {
+button, input[type=button] {
   background-color: rgb(236, 201, 226);
   border-radius: 0.5rem;
   padding: 10px;
@@ -39,7 +39,7 @@ button {
   border-color:transparent;
 }
 
-button:hover {
+button:hover, input[type=button]:hover {
   background-color: purple;
   top:20px;
   transition: 0.5s;

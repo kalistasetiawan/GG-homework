@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import Spotifylist from './components/Spotifylist';
 // import logo from './logo.svg';
 // import Gifs from './components/Gif';
-import Playlist from './components/Playlist';
-import Header from './components/List/header';
+// import Playlist from './components/Playlist';
+// import Header from './components/List/header';
 // import List from './components/List';
 import './App.css';
 
@@ -10,6 +11,9 @@ function App() {
 
   return (
     <div className="App">
+      
+      <Spotifylist />
+
         {/* <h1>Search Giphy</h1>
         <input type="text" />
         <button id="searchbar">Search</button>
@@ -17,10 +21,14 @@ function App() {
         <div class="box">
         <Gifs /> 
         </div> */}
-        <Header />
+
+        {/* <Gifs />  */}
+
+        {/* <Header />
         <div class="outer" id="outer">
         {<Playlist />}
-       </div>
+       </div> */}
+
     </div>
   );
 }

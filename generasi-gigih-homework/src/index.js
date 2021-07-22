@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   // <React.StrictMode>
-  //   <AppRouter />
+  //   <App />
   // </React.StrictMode>,
   <Provider store={store}>
     <AppRouter />
