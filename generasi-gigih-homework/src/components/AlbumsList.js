@@ -3,11 +3,15 @@ import _ from 'lodash';
 
 const AlbumsList = ({ albums }) => {
 
-  const saveAndContinue = (e) => {
-    e.preventDefault();
-    e.target.value = "Deselect"; 
-  }
+  // const saveAndContinue = (e) => {
+  //   e.preventDefault();
+  //   e.target.value = "Deselect"; 
+  // }
+
   return (
+
+    // This binding is necessary to make `this` work in the callback
+
     <React.Fragment>
       {Object.keys(albums).length > 0 && (
         <div className="albums">
@@ -32,7 +36,7 @@ const AlbumsList = ({ albums }) => {
                   </a>
                   <p><b>{album.name}</b></p>
                     <small>{album.artists.map((artist) => artist.name).join(', ')}</small>
-                    <p><input type="button" value="Select" onClick={saveAndContinue} /></p>
+                    <p><button>{this.state.target ? 'Select' : 'Deselect'}</button></p>
                 </div>
               </React.Fragment>
             );
