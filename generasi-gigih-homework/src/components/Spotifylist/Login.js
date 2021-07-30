@@ -11,9 +11,9 @@ const {
   const space_delimiter = "%20";
   
   const SCOPES = [
-    "user-read-currently-playing",
-    "user-read-playback-state",
     "playlist-read-private",
+    "playlist-modify-private",
+    "user-read-private",
   ];
   
   const SCOPES_URL_PARAM = SCOPES.join(space_delimiter);
@@ -30,7 +30,7 @@ const Login = () => {
     
     return (
         <React.Fragment>
-        <div className="login">
+        <div className="login" class="wrap2">
           <h1>Kalista Playlist</h1>
           <button onClick={handleLogin}>Login</button>
         </div>

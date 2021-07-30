@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
-import GetPlaylists from './GetPlaylist';
-import Header from '../List/header';
 import SearchTrack from './SearchTrack';
+import Sidebar from './navbar/sidebar';
+import Nav from './navbar/nav';
+import CreatePlaylists from './CreatePlaylist';
 
 const getReturnedParamsFromSpotifyAuth = (hash) => {
   const stringAfterHashtag = hash.substring(1);
   const paramsInUrl = stringAfterHashtag.split("&");
   const paramsSplitUp = paramsInUrl.reduce((accumulater, currentValue) => {
-    console.log(currentValue);
+    // console.log(currentValue);
     const [key, value] = currentValue.split("=");
     accumulater[key] = value;
     return accumulater;
@@ -32,12 +33,14 @@ const Redirect = () => {
   });
   
       return (
-        <div>
-          <Header />
-          <GetPlaylists />
-          <br></br>
+        <>
+        <Sidebar />
+        <Nav />
+        <div class="wrap">
         <SearchTrack />
-        </div>        
+        <CreatePlaylists />
+        </div> 
+        </>       
       );
     };
 

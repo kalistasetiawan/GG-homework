@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Spotifylist from './components/Spotifylist';
 // import logo from './logo.svg';
 // import Gifs from './components/Gif';

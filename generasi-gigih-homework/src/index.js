@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import store from './components/store/store';
+// import { Provider } from 'react-redux';
+// import store from './components/store/store';
 import './index.css';
 import App from './App';
-import AppRouter from './router/AppRouter';
+// import AppRouter from './router/AppRouter';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

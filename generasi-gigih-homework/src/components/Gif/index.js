@@ -1,6 +1,6 @@
 // import gif from './gif';
 // import gifs from './gifs';
-import {Component, useState} from 'react';
+import {useState} from 'react';
 import axios from 'axios';
 
 const SearchComponent = () => {
@@ -26,7 +26,7 @@ const SearchComponent = () => {
             <button onClick={getText}>Search</button><br></br>
             {result.map(gif => (
                 <div class="box">
-                <img src={gif.images.original.url} title={gif.title} width="200" height="200" />
+                <img src={gif.images.original.url} title={gif.title} alt={gif.name} width="200" height="200" />
                 </div>
             ))}
         </div>
