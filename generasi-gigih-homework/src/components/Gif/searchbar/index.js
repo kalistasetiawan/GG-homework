@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import SearchComponent from '../../Gif';
 
 const Searchbar = () => {
     const [textInput, setTextInput] = useState([]);
-
-    const [query, setQuery] = useState('');
 
     const handleForm = (e) => {
         e.preventDefault();
@@ -14,8 +11,8 @@ const Searchbar = () => {
     return (
         <div>
             <form onChange={handleForm}>
-            <input type="text" value={textInput} onChange={handleChange} />
-            <button onClick={handleSearch}>Search</button>
+            <input type="text" value={textInput} />
+            <button>Search</button>
             </form>
         </div>
     )
