@@ -36,7 +36,7 @@ const Redirect = () => {
         <>
         <Sidebar />
         <Nav />
-        <div class="wrap">
+        <div className="wrap">
         <SearchTrack />
         <CreatePlaylists />
         </div> 

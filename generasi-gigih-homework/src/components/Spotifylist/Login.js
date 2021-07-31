@@ -30,7 +30,7 @@ const Login = () => {
     
     return (
         <React.Fragment>
-        <div className="login" class="wrap2">
+        <div className="wrap2">
           <h1>Kalista Playlist</h1>
           <button onClick={handleLogin}>Login</button>
         </div>

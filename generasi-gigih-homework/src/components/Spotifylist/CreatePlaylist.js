@@ -76,7 +76,7 @@ const handleDesc = (event) => {
 
   return (
     <>
-    <div class="wrap3" className="CreatePlaylist">
+    <div className="wrap3">
         <h2>Create Playlist</h2>
         <input type="text" onChange={handleTitle} placeholder="Title"/>
         <input type="text" id="desc" onChange={handleDesc} placeholder="Description"/>

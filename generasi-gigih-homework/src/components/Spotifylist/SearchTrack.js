@@ -49,7 +49,7 @@ const saveAndContinue = (e) => {
 
   return (
     <>
-      <div class="wrap3">
+      <div className="wrap3">
       Search, the track you wanna hear:
       <br></br>
         <input type="text" id="search" placeholder="Enter the keyword that you want to search" value={search} onChange={handleSearch} />
@@ -58,8 +58,8 @@ const saveAndContinue = (e) => {
       
       {data.map(item => {
           return (
-            <div class="box">
-              <a target="_blank" href={item.external_urls.spotify} rel="noopener noreferrer" className="card-image-link">
+            <div className="box" key={item.id}>
+              <a target="_blank" href={item.external_urls.spotify} rel="noopener noreferrer">
                 <img src={item.album.images[0].url} alt="" width="200" height="200"/></a>   
               <p><b>{item.name}</b></p>
               <small>{item.album.artists.map((artist) => artist.name).join(', ')}</small>
