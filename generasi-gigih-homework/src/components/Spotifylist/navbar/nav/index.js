@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
+import arrowLeft from '../img/arrow-left-circle-fill.svg';
 
 const PLAYLISTS_ENDPOINT = "https://api.spotify.com/v1/me";
 
@@ -34,8 +35,8 @@ const Nav = () => {
     <div>
       <div className="nav">
         <div className="navbar">
-          <a href="" onClick={handleGetPlaylists}>
-            <img src="../img/arrow-left-circle-fill.svg" width="20px" height="20px" alt="arrow-left"/></a>
+          <a onClick={handleGetPlaylists}>
+            <img src={arrowLeft} width="20px" height="20px" alt="arrow-left"/></a>
         </div>
         {data && data.map(item => {
           return (

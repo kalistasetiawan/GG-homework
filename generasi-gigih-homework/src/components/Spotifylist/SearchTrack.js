@@ -55,19 +55,20 @@ const saveAndContinue = (e) => {
         <input type="text" id="search" placeholder="Enter the keyword that you want to search" value={search} onChange={handleSearch} />
         <button onClick={handleGetPlaylists}>Search</button><br></br>
       </div>
-      
+      <div className="outer">
       {data.map(item => {
           return (
             <div className="box" key={item.id}>
               <a target="_blank" href={item.external_urls.spotify} rel="noopener noreferrer">
-                <img src={item.album.images[0].url} alt="" width="200" height="200"/></a>   
-              <p><b>{item.name}</b></p>
-              <small>{item.album.artists.map((artist) => artist.name).join(', ')}</small>
-              <p><input type="button" id={uri} value="Select" onClick={saveAndContinue}/></p>
+                <img src={item.album.images[0].url} alt="" width="200" height="200"/></a>
+              <p><b>{item.name}</b><br></br>
+              By {item.album.artists.map((artist) => artist.name).join(', ')}</p>
+              <br></br>
+              <input type="button" id={uri} value="Select" onClick={saveAndContinue}/>
             </div>
           )
       })}
-                  
+      </div>          
     </>
   );
 };

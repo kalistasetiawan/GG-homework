@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import arrowDown from './navbar/img/arrow-down.svg'
 
 const PLAYLISTS_ENDPOINT = "https://api.spotify.com/v1/me/playlists";
 
@@ -34,8 +35,8 @@ const GetPlaylists = () => {
     <div className="left-nav">
     <a onClick={handleGetPlaylists}>
       <h1>Playlist &nbsp; &nbsp; 
-        <img src="./navbar/img/arrow-down.svg" width="20px" height="20px" alt="arrow-down"/></h1></a>
-      { data?.items ? data.items.map((item) => <p key={item.id}><a href={item.external_urls.spotify}>{item.name}</a></p>) : null}
+        <img src={arrowDown} width="20px" height="20px" alt="arrow-down"/></h1></a>
+      { data?.items ? data.items.map((item) => <div className="left-navbar" key={item.id}><a href={item.external_urls.spotify}>{item.name}</a></div>) : null}
     </div>
     </>
   );

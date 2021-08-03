@@ -5,18 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #403A3E;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #BE5869, #403A3E);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #BE5869, #403A3E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: white;
+  background-color: rgb(238, 213, 231);
+  color: rgb(36, 32, 31);
 }
 
 h1 {
   font-size: 30px;
   padding: 15px;
   font-weight: bolder;
-  color: whitesmoke;
-  text-align: left;
+  color: rgb(36, 32, 31);
   margin-left: 20px;
 }
 
@@ -48,10 +45,10 @@ h1 {
 }
 
 .navbar {
-  color: white;
+  color: rgb(36, 32, 31);
   padding: 3px;
   text-decoration: none;
-  background-color: #111;
+  background-color:  rgb(241, 227, 238);
   border-radius: 5rem;
   display: inline-flex;
   float: right;
@@ -74,25 +71,36 @@ h1 {
   background-color: rgb(207, 125, 120);
   transition: 0.5s;
   cursor: pointer;
+  color: whitesmoke;
 }
 
 .left-nav a.active {
-  color: white;
+  color: rgb(36, 32, 31);
   font-weight: bolder;
+  background-color: rgb(241, 170, 163);
+  width: 70%;
+  border-radius: 50rem;
 }
 
 .left-nav a:hover:not(.active) {
   font-weight: bold;
-  color: white;
+  color: rgb(36, 32, 31);
   transition: 0.5s;
   cursor: pointer;
+  background-color: rgb(247, 207, 204);
+  width: 70%;
+  border-radius: 50rem;
+}
+
+.left-nav h1 {
+  text-align: left;
 }
 
 .left-nav {
   list-style-type: none;
   padding: 0;
   width: 25%;
-  background-color: rgb(58, 48, 48);
+  background-color:rgb(241, 227, 238);
   position: fixed;
   height: 100%;
   overflow: auto;
@@ -100,7 +108,7 @@ h1 {
 
 .left-navbar a {
   display: block;
-  color: white;
+  color: rgb(36, 32, 31);
   text-align: left;
   margin-left: 20px;
   padding: 8px 16px;
@@ -108,13 +116,13 @@ h1 {
 }
 
 .left-navbar a.active {
-  color: white;
+  color: rgb(36, 32, 31);
   font-weight: bolder;
 }
 
 .left-navbar a:hover:not(.active) {
   font-weight: bold;
-  color: white;
+  color: rgb(36, 32, 31);
   transition: 0.5s;
 }
 
@@ -123,9 +131,9 @@ h1 {
 }
 
 .outer {
-  width: 100%;
-  display: table;
-  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
 }
 
 h3 {
@@ -135,7 +143,7 @@ h3 {
   padding-left: 5px;
 }
 
-button, input[type=button] {
+button {
   background-color: rgb(236, 201, 226);
   border-radius: 0.5rem;
   padding: 10px;
@@ -144,25 +152,30 @@ button, input[type=button] {
   margin-left: 10px;
   color: black;
   width: 100px;
-  top:-20px;
+  border-color:transparent;
+}
+
+input[type=button] {
+  background-color: rgb(240, 186, 225);
+  border-radius: 0.5rem;
+  padding-top: 10px;
+  color: black;
+  width: 200px;
   border-color:transparent;
 }
 
 button:hover, input[type=button]:hover {
-  background-color: rgb(207, 125, 120);;
-  top:20px;
+  background-color: rgb(207, 125, 120);
   transition: 0.5s;
-  color: white;
+  color: whitesmoke;
   cursor: pointer;
 }
 
 .box {
-  text-align: center;
-  width: 200px;
-  padding: 10px;
+  display: grid;
+  padding: 15px;
   margin: 10px;
-  display: inline-table;
-  background-color: rgb(197, 158, 154);
+  background-color: rgb(236, 201, 226);
   opacity: 0.9;
   border-radius: 10px;
   font-size: 14px;
@@ -215,11 +228,12 @@ code {
 }
 
 a {
-  color:whitesmoke;
+  color: rgb(36, 32, 31);
   text-decoration: none;
 }
 
 a:hover {
   font-weight: bold;
   transition: 0.5s;
+  color: whitesmoke;
 }

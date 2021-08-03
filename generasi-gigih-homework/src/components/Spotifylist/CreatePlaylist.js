@@ -8,12 +8,13 @@ const CreatePlaylists = () => {
   const [token, setToken] = useState("");
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
+  const uri = "spotify:track:0pYacDCZuRhcrwGUA5nTBe,spotify:track:71WZ7yFuwxmQz5jJUpvkGv,spotify:track:4cK8aSO2Ec4gmIjhtHfAKd";
 
   const handleTitle = (event) => {
     setTitle(event.target.value)
 }
 
-const handleDesc = (event) => {
+  const handleDesc = (event) => {
   setDesc(event.target.value)
 }
 //   const userID = useState('');
@@ -32,7 +33,7 @@ const handleDesc = (event) => {
         },
       })
       .then(response => {
-        // console.log(response.data.href);
+        // console.log(response.data.id);
         axios("https://api.spotify.com/v1/users/"+response.data.id+"/playlists", {
           method: 'POST',
           headers: {
@@ -48,13 +49,12 @@ const handleDesc = (event) => {
           .then(response => {
             // setList(response);
             // console.log(response);
-            axios("https://api.spotify.com/v1/playlists/"+response.data.id+"/tracks", {
+            axios(`https://api.spotify.com/v1/playlists/`+response.data.id+`/tracks?uris=${encodeURIComponent(uri)}`, {
             method: 'POST',
             headers: {
               Authorization: "Bearer " + token,
               "Content-Type": "application/json"
-            },     
-            "uris":"spotify:track:0pYacDCZuRhcrwGUA5nTBe",       
+            },            
             })
             .then((response) => {
               // setList(response);
