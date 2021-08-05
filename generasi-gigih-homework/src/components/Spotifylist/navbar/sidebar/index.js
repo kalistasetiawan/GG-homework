@@ -8,11 +8,11 @@ function Sidebar() {
     return (
         <div className="left-nav">
             <h1>Kalista Playlist</h1>
-            <div className="left-navbar"><a className="active" href="#home">
+            <div className="left-navbar"><a href="/">
                 <img src={houseIcon} width="16" height="16" alt="house"/> &nbsp; Home</a></div>
-            <div className="left-navbar"><a href="#news">
+            <div className="left-navbar"><a href="/search-track">
                 <img src={searchIcon} width="16" height="16" alt="search"/> &nbsp; Search</a></div>
-            <div className="left-navbar"><a href="#contact">
+            <div className="left-navbar"><a href="/create-playlist">
             <img src={musicIcon} width="16" height="16" alt="music-list"/> &nbsp; Create Playlist</a></div>
 
             <GetPlaylist />

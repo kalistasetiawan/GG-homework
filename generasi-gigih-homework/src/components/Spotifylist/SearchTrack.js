@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import TextField from '@material-ui/core/TextField';
 
 const SearchTrack = () => {
   const[search, setSearch] = useState('')
@@ -52,7 +53,7 @@ const saveAndContinue = (e) => {
       <div className="wrap3">
       Search, the track you wanna hear:
       <br></br>
-        <input type="text" id="search" placeholder="Enter the keyword that you want to search" value={search} onChange={handleSearch} />
+        <TextField label="Enter the keyword" id="search" value={search} onChange={handleSearch} />
         <button onClick={handleGetPlaylists}>Search</button><br></br>
       </div>
       <div className="outer">

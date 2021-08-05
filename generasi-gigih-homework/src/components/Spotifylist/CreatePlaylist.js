@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import TextField from '@material-ui/core/TextField';
 
 const PROFILE_ENDPOINT = "https://api.spotify.com/v1/me";
 
@@ -78,8 +79,8 @@ const CreatePlaylists = () => {
     <>
     <div className="wrap3">
         <h2>Create Playlist</h2>
-        <input type="text" onChange={handleTitle} placeholder="Title"/>
-        <input type="text" id="desc" onChange={handleDesc} placeholder="Description"/>
+        <TextField label="Title" onChange={handleTitle}/>&nbsp; &nbsp;
+        <TextField label="Description" id="desc" onChange={handleDesc} />
         <button onClick={GetProfile}>Submit</button>
     </div>
     </>
